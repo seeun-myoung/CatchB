@@ -18,9 +18,13 @@ const ToiletSelectScreen = () => {
   
   return (
     <View>
-      <Text> {floor}성별을 선택하세요</Text>
-      <Button title='여자' onPress={() => console.log('여자 선택')}/>
-      <Button title='남자' onPress={() => console.log('남자 선택')}/>
+      <Text>성별을 선택하세요</Text>
+      <Button title='여자' onPress={() => {
+        navigation.navigate('ToiletStatus',{floor, gender: 'female'});
+      }}/>
+      <Button title='남자' onPress={() => {
+        navigation.navigate('ToiletStatus',{floor, gender: 'male'});
+      }}/>
     </View>
   )
 }

@@ -2,7 +2,7 @@ import React from 'react'
 import { View, Text, Button } from 'react-native'
 import { useNavigation } from '@react-navigation/native';
 
-export default function FloorSelectScreen  ()  {
+const FloorSelectScreen = () => {
   const navigation = useNavigation<any>();
   console.log('🚽 FloorSelectScreen 렌더링됨');
 
@@ -20,3 +20,5 @@ export default function FloorSelectScreen  ()  {
     </View>
   )
 }
+
+export default FloorSelectScreen
