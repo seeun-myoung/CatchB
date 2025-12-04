@@ -1,5 +1,5 @@
 import {  View, Text,  ScrollView } from 'react-native'
-import React ,{ useLayoutEffect } from 'react'
+import React from 'react'
 import { useRoute, useNavigation } from '@react-navigation/native';
 
 const ToiletStatusScreen = () => {
@@ -8,11 +8,7 @@ const ToiletStatusScreen = () => {
   const gender = route.params.gender;
   const floor = route.params.floor;
   console.log(floor,navigation,gender)
-  useLayoutEffect(()=>{
-    navigation.setOptions({
-        title:`${floor}층 ${gender === 'male'? '남자':'여자'}화장실`
-    })
-  },[floor,gender,navigation])
+  
   return (
     <View>
       <Text>화장실을 선택해주세요</Text>
