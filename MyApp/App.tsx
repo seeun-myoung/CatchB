@@ -27,7 +27,7 @@ const App = () => {
           options={({ route }) => {
             const params:any = route.params || {};
             return{
-              title:`${params?.floor ?? ''}화장실 선택`
+              title:`${params.floor}층 화장실 선택`
             }
           }}           
         />
@@ -39,7 +39,7 @@ const App = () => {
           options={({ route }) => {
             const params:any = route.params || {};
             return{
-             title: `${params.floor}`
+             title: `${params.floor}층 ${params.floor.gender=== 'male'? '남자':'여자'} 화장실`
             }
           }}
         />

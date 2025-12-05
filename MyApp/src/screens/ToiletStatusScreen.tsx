@@ -8,6 +8,16 @@ const ToiletStatusScreen = () => {
   const gender = route.params.gender;
   const floor = route.params.floor;
   console.log(floor,navigation,gender)
+
+  const toiletCounts ={
+    male: {
+      urinal:4,
+      toilet:3
+    },
+    female: {
+toilet:6
+    }
+  }
   
   return (
     <View>
